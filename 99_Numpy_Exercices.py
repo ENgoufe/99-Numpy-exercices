@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[29]:
+# In[1]:
 
 
 # Import and Print the numpy version and the configuration (★☆☆)
@@ -9,7 +9,7 @@ import numpy as np
 np.version.version
 
 
-# In[5]:
+# In[2]:
 
 
 # 2. Create a null vector of size 10 (★☆☆)
@@ -17,14 +17,14 @@ ten_zero = np.zeros(10)
 print(ten_zero)
 
 
-# In[8]:
+# In[3]:
 
 
 # How to find the memory size of any array (★☆☆)
 np.size(ten_zero)
 
 
-# In[9]:
+# In[4]:
 
 
 # Create a null vector of size 10 but the fifth value which is 1 (★☆☆)
@@ -32,7 +32,7 @@ ten_zero[5] = 1
 print(ten_zero)
 
 
-# In[12]:
+# In[5]:
 
 
 #Create a vector with values ranging from 10 to 49 (★☆☆)
@@ -40,7 +40,7 @@ first_r = np.arange(10, 50)
 print(first_r)
 
 
-# In[13]:
+# In[6]:
 
 
 # Reverse a vector (first element becomes last) (★☆☆)
@@ -48,7 +48,7 @@ revert_first_r = np.flip(first_r) # first_r[::-1]
 print(revert_first_r)
 
 
-# In[14]:
+# In[7]:
 
 
 # Create a 3x3 matrix with values ranging from 0 to 8 (★☆☆)
@@ -56,7 +56,7 @@ twoD = np.arange(9).reshape(3, 3)
 print(twoD)
 
 
-# In[19]:
+# In[8]:
 
 
 # Find indices of non-zero elements from [1,2,0,0,4,0,5,7,0,0,23,67,0,0,0] (★☆☆)
@@ -64,7 +64,7 @@ my_indices = np.where(~np.isin([1,2,0,0,4,0,5,7,0,0,23,67,0,0,0], 0))
 print(my_indices)
 
 
-# In[20]:
+# In[9]:
 
 
 #Create a 5x5 identity matrix (★☆☆)
@@ -72,7 +72,7 @@ identity_matrix = np.eye(5)
 print(identity_matrix)
 
 
-# In[24]:
+# In[10]:
 
 
 # Create a 10x10 array with random values and find the minimum and maximum values (★☆☆)
@@ -83,7 +83,7 @@ min_ten_ten = np.min(ten_ten)
 print(min_ten_ten, max_ten_ten)
 
 
-# In[26]:
+# In[11]:
 
 
 # Create a random vector of size 30 and find the mean value (★☆☆)
@@ -92,7 +92,7 @@ mean_of_my_arr = np.mean(my_arr)
 print(mean_of_my_arr)
 
 
-# In[28]:
+# In[12]:
 
 
 # Create a 2d array with 1 on the border and 0 inside (★☆☆)
@@ -104,7 +104,7 @@ my_arr1[:, 0] = 1   #left
 print(my_arr1)
 
 
-# In[33]:
+# In[13]:
 
 
 # How to add a border (filled with 0's) around an existing array?
@@ -113,7 +113,7 @@ z = np.pad(z, pad_width=1, mode='constant', constant_values=0)
 print(z)
 
 
-# In[34]:
+# In[14]:
 
 
 # What is the result of the following expression? (★☆☆)
@@ -125,7 +125,7 @@ print(z)
 # 0.3 == 3 * 0.1  ---> false ---> np.isclose(0.3, 3 * 0.1)
 
 
-# In[42]:
+# In[15]:
 
 
 # Create a 5x5 matrix with values 1,2,3,4 just below the diagonal (★☆☆)
@@ -140,7 +140,7 @@ print(np.diag(x, k=-1)) # Output: array([3, 7])
 print(np.diag(np.diag(x))) # Output: array([[0, 0, 0], [0, 4, 0], [0, 0, 8]])'''
 
 
-# In[45]:
+# In[16]:
 
 
 # Create a 8x8 matrix and fill it with a checkerboard pattern (★☆☆)
@@ -150,7 +150,7 @@ x[::2, 1::2] = 1
 print(x)
 
 
-# In[49]:
+# In[17]:
 
 
 # Consider a (6,7,8) shape array, what is the index (x,y,z) of the 100th element? (★☆☆)
@@ -160,7 +160,7 @@ index = np.unravel_index(100, x.shape)
 print("Index:", index)
 
 
-# In[51]:
+# In[18]:
 
 
 #  Create a checkerboard 8x8 matrix using the tile function (★☆☆)
@@ -169,7 +169,7 @@ x = np.tile(pattern, (4, 4))
 print(x)
 
 
-# In[54]:
+# In[19]:
 
 
 # Normalize a 5x5 random matrix (★☆☆)
@@ -181,7 +181,7 @@ print("Original Matrix:\n", matrix)
 print("Row-wise Normalized Matrix:\n", normalized_matrix)
 
 
-# In[55]:
+# In[20]:
 
 
 # Create a custom dtype that describes a color as four unsigned bytes (RGBA) (★☆☆)
@@ -199,7 +199,7 @@ colors = np.array([(255, 0, 132, 255), (0, 234, 0, 255), (0, 0, 255, 179)], dtyp
 print(colors)
 
 
-# In[58]:
+# In[21]:
 
 
 # Multiply a 5x3 matrix by a 3x2 matrix (real matrix product) (★☆☆)
@@ -209,7 +209,7 @@ result = x @ y
 print(result)
 
 
-# In[61]:
+# In[22]:
 
 
 # Given a 1D array, negate all elements which are between 3 and 8, in place. (★☆☆)
@@ -219,7 +219,7 @@ x[3:9:] *= -1
 print(x)
 
 
-# In[62]:
+# In[23]:
 
 
 # Consider an integer vector Z, which of these expressions are legal? (★☆☆)
@@ -231,7 +231,7 @@ print(x)
 # Z<Z>Z  legal
 
 
-# In[63]:
+# In[24]:
 
 
 # How to round away from zero a float array ? (★☆☆)
@@ -240,7 +240,7 @@ rounded = np.copysign(np.ceil(np.abs(arr)), arr)
 print(rounded)
 
 
-# In[66]:
+# In[25]:
 
 
 # How to find common values between two arrays? (★☆☆)
@@ -250,7 +250,7 @@ common_values = np.intersect1d(array1, array2)
 print("Common values:", common_values)
 
 
-# In[69]:
+# In[26]:
 
 
 # How to get the dates of yesterday, today and tomorrow? (★☆☆)
@@ -261,6 +261,76 @@ tomorrow = today + np.timedelta64(1, 'D')
 print("Yesterday:", yesterday)
 print("Today:", today)
 print("Tomorrow:", tomorrow)
+
+
+# In[28]:
+
+
+#How to get all the dates corresponding to the month of July 2016? (★★☆)
+start_date = np.datetime64('2016-07-01')
+end_date = np.datetime64('2016-08-01')
+
+july = np.arange(start_date, end_date, dtype='datetime64[D]')
+print(july)
+
+
+# In[32]:
+
+
+# Extract the integer part of a random array of positive numbers using 3 different methods (★★☆)
+random_nums = np.random.rand(10) * 50
+print(random_nums)
+#Method 1
+integer_part = random_nums -(random_nums % 1)
+print(integer_part)
+# Method 2
+integer_part1 = np.floor(random_nums)
+print(integer_part1)
+# Method 3
+use_astype = random_nums.astype(int)
+print(use_astype)
+
+
+# In[36]:
+
+
+# Create a 5x5 matrix with row values ranging from 0 to 4 (★★☆)
+matrix = np.tile(np.arange(5), (5,1))
+print(matrix)
+
+
+# In[39]:
+
+
+#Consider a generator function that generates 10 integers and use it to build an array (★☆☆)
+#`hint: np.fromiter`
+arr = np.fromiter(range(10), dtype=int)
+arr
+
+
+# In[41]:
+
+
+# Create a vector of size 10 with values ranging from 0 to 1, both excluded (★★☆)
+arr = np.random.rand(10)
+arr
+
+
+# In[42]:
+
+
+# Create a random vector of size 10 and sort it (★★☆)
+arr = np.random.rand(10) * 100
+arr = np.sort(arr)
+arr
+
+
+# In[43]:
+
+
+# How to sum a small array faster than np.sum? (★★☆)
+result = np.add.reduce(arr)
+result
 
 
 # In[ ]:
